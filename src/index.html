@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Processamento</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Resumo das Transações</h1>
+        
+        <div class="dashboard-grid">
+            
+            <div class="card">
+                <h3>Total Processado</h3>
+                <p id="total-transacoes" class="valor">Carregando...</p>
+            </div>
+
+            <div class="card success">
+                <h3>Valor Aprovado</h3>
+                <p id="valor-aprovado" class="valor">R$ 0,00</p>
+            </div>
+
+            <div class="card danger">
+                <h3>Erros Encontrados</h3>
+                <p id="total-erros" class="valor">0</p>
+            </div>
+
+            <div class="grafic">
+                <canvas id="myChart"></canvas>
+            </div>
+
+        </div>
+
+        <div class="status-footer">
+            <p>Status do Sistema: <span id="system-status">Aguardando leitura...</span></p>
+            <button onclick="carregarDados()">Atualizar Agora</button>
+        </div>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
